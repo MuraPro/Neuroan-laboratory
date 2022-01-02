@@ -1488,6 +1488,9 @@ body._touch .header-menu__list > li._active {
   justify-content: center;
   margin: 29px 41px 30px 582px;
 }
+.result__update_right button:hover {
+  color: #4a90e2;
+}
 
 .result__update button {
   font-family: "montserat-r";
@@ -1515,15 +1518,83 @@ body._touch .header-menu__list > li._active {
   box-sizing: border-box;
   width: 100%;
 }
+.result__update_table table input[type="text"] {
+  font-family: "montserat-r";
+  font-size: 13px;
+  line-height: 150%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #000000;
+}
 
 .result__update_table table tr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  /* стили для активного состояния чекбокса (при нажатии на него) */
+  /* стили для чекбокса, находящегося в фокусе */
+  /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+  /* стили для чекбокса, находящегося в состоянии disabled */
+}
+
+.result__update_table table tr .custom-checkbox::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  background: #f4f4f6;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.result__update_table table tr .custom-checkbox:checked::before {
+  border-color: #0b76ef;
+  background-color: #0b76ef;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+.result__update_table
+  table
+  tr
+  .custom-checkbox:not(:disabled):not(:checked):hover::before {
+  border-color: #b3d7ff;
+}
+
+.result__update_table table tr .custom-checkbox:not(:disabled):active::before {
+  background-color: #b3d7ff;
+  border-color: #b3d7ff;
+}
+
+.result__update_table table tr .custom-checkbox:focus::before {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.result__update_table table tr .custom-checkbox:focus:not(:checked)::before {
+  border-color: #80bdff;
+}
+
+.result__update_table table tr .custom-checkbox:disabled::before {
+  background-color: #e9ecef;
 }
 
 .result__update_table table th {
-  width: 20%;
   font-family: "montserat-r";
   font-size: 13px;
   line-height: 150%;
@@ -1543,7 +1614,6 @@ body._touch .header-menu__list > li._active {
 }
 
 .result__update_table table td {
-  width: 20%;
   font-family: "montserat-r";
   font-size: 13px;
   line-height: 150%;
@@ -1654,6 +1724,7 @@ input[type="text"] {
 .result__container {
   position: absolute;
   width: 580px;
+  transition: 0.5s;
   min-height: 751px;
   background: #ffffff;
   border-radius: 15px;
