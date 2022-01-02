@@ -739,23 +739,11 @@ body._touch .header-menu__list > li._active {
 /* === section-upload === */
 
 .section__upload {
-  /* max-width: 1400px;
   min-height: 500px;
   margin: 0 auto;
   margin: 100px 0 87px 0;
-   */
-  width: 100%;
-  min-height: 500px;
-  margin: 0 auto;
-  margin: 100px 0 87px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 .section__upload_header {
-  position: relative;
-  left: -358px;
 }
 .section__upload_header h2 {
   font-family: "montserat-m";
@@ -839,7 +827,12 @@ body._touch .header-menu__list > li._active {
   border-radius: 15px 15px 0px 0px;
   position: absolute;
 }
-
+/* table_3 */
+.item-left_header .points {
+  position: relative;
+  top: -6px;
+  left: 95px;
+}
 .item-left_header h3 {
   width: 190px;
   font-family: "montserat-r";
@@ -866,7 +859,7 @@ body._touch .header-menu__list > li._active {
 
 .item-left_box {
   width: 279px;
-  height: 327px;
+  min-height: 327px;
   background: #f4f4f6;
   border: 1px solid #e8e8e8;
   -webkit-box-sizing: border-box;
@@ -921,6 +914,14 @@ body._touch .header-menu__list > li._active {
   line-height: 158.5%;
   color: #000000;
   padding-left: 26px;
+}
+
+.box-hand {
+  min-height: 195px;
+}
+
+.header-hand {
+  background-color: #2049d8;
 }
 
 .item-rigth__selection {
@@ -1279,7 +1280,7 @@ body._touch .header-menu__list > li._active {
 /* === figure === */
 
 .figure {
-  max-width: 1400px;
+  width: 1400px;
   margin: 0 auto;
   margin-top: 80px;
   display: -ms-flex;
@@ -1475,7 +1476,9 @@ body._touch .header-menu__list > li._active {
   justify-content: center;
   margin: 29px -520px 30px 433px;
 }
-
+.result__update_left button:hover {
+  color: #4a90e2;
+}
 .result__update_right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1533,7 +1536,7 @@ body._touch .header-menu__list > li._active {
   justify-content: center;
   color: #000000;
 }
-
+/* Стили для таблицы с checkboxs*/
 .result__update_table table tr {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1680,7 +1683,36 @@ body._touch .header-menu__list > li._active {
   align-items: center;
   color: #1c1c1c;
 }
+.result__update_table table .coment_view {
+  width: 90px;
+  height: 41px;
+  background: #e8e8e8;
+  border-radius: 5px;
+  font-family: "montserat-m";
+  font-size: 14.8895px;
+  line-height: 150%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #1c1c1c;
+  margin-left: 14px;
+}
 
+.result__update_table table .coment_btn {
+  width: 125px;
+  height: 41px;
+  background: #1dd8ff;
+  border-radius: 5px;
+  font-family: "montserat-m";
+  font-size: 14.8895px;
+  line-height: 150%;
+}
 input[type="text"] {
   font-family: "montserat-r";
   font-size: 13px;
@@ -1845,6 +1877,51 @@ input[type="text"] {
   position: relative;
   left: 173px;
   top: -56px;
+}
+
+/* table_3 всплытие окна */
+.result__container .table_3-header {
+  position: relative;
+  top: -38px;
+  left: 0;
+  width: 580px;
+  height: 95px;
+  background: #f4f4f6;
+  border-radius: 15px 15px 0px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.result__container .table_3-text {
+  margin-top: 74px;
+}
+
+.table_3 {
+  position: absolute;
+  width: 580px;
+  min-height: 593px;
+  background: #ffffff;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 400;
 }
 /*  === footer === */
 .footer {
